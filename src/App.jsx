@@ -55,21 +55,23 @@ const kidsCollection = [
 const App = () => {
 
   return (
-    <div>
+    <div className="flex flex-col min-h-screen">
       <Navbar />
-      <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/about' element={<About />} />
-        <Route path='/contact' element={<Contact />} />
-        <Route path='/course' element={<Courses />} />
-        <Route path='/course/:id' element={<CoursesDetails />} />
-        <Route path='/products' element={<Products />}>
-          <Route path='men' element={<Men menCollection={menCollection} />} />
-          <Route path='women' element={<Women womenCollection={womenCollection} />} />
-          <Route path='kids' element={<Kids kidsCollection={kidsCollection} />} />
-        </Route>
-        <Route path="*" element={<NotFound />} />
-      </Routes>
+      <main className="flex-grow">
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/about' element={<About />} />
+          <Route path='/contact' element={<Contact />} />
+          <Route path='/course' element={<Courses />} />
+          <Route path='/course/:id' element={<CoursesDetails />} />
+          <Route path='/products' element={<Products />}>
+            <Route path='men' element={<Men menCollection={menCollection} />} />
+            <Route path='women' element={<Women womenCollection={womenCollection} />} />
+            <Route path='kids' element={<Kids kidsCollection={kidsCollection} />} />
+          </Route>
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </main>
       <Footer />
     </div>
   )
