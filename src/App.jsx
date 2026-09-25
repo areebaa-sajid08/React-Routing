@@ -52,10 +52,35 @@ const kidsCollection = [
   { id: 10, name: 'Sunglasses', price: 900, image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSO4c5HF3yzNI_uGeO9DGr2wV5mjDwPMCzJpZ87XVUW-TmCJfnBdMeucyCB&s=10', category: 'Kids' },
 ]
 
-const App = () => {
+// const App = () => {
 
+//   return (
+//     <div className="flex flex-col min-h-screen">
+//       <Navbar />
+//       <main className="flex-grow">
+//         <Routes>
+//           <Route path='/' element={<Home />} />
+//           <Route path='/about' element={<About />} />
+//           <Route path='/contact' element={<Contact />} />
+//           <Route path='/course' element={<Courses />} />
+//           <Route path='/course/:id' element={<CoursesDetails />} />
+//           <Route path='/products' element={<Products />}>
+//             <Route path='men' element={<Men menCollection={menCollection} />} />
+//             <Route path='women' element={<Women womenCollection={womenCollection} />} />
+//             <Route path='kids' element={<Kids kidsCollection={kidsCollection} />} />
+//           </Route>
+//           <Route path="*" element={<NotFound />} />
+//         </Routes>
+//       </main>
+//       <Footer />
+//     </div>
+//   )
+// }
+
+// export default App
+const App = () => {
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen bg-slate-50">
       <Navbar />
       <main className="flex-grow">
         <Routes>
@@ -76,5 +101,3 @@ const App = () => {
     </div>
   )
 }
-
-export default App
